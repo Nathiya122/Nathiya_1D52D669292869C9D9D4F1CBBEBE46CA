@@ -1,20 +1,15 @@
-#Implement a class called Player and derive two classes called Batsman,Bowler.
+def lsp(product, target):
+  indices = []
+  for index, product in enumerate(product):
+    if product == target:
+      indices.append(index)
+  return indices
 
-class Player:
-  def play(self):
-      print("The player is playing cricket.")
 
-class Batsman(Player):
-  def play(self):
-      print("The batsman is batting.")
-
-class Bowler(Player):
-  def play(self):
-      print("The bowler is bowling.")
-
-batsman = Batsman()
-bowler = Bowler()
-
-#Calling the play() method for each object.
-batsman.play()
-bowler.play()
+product = ["shoes", "loafer", "shoes", "boots", "sandles", "shoes"]
+target = "shoes"
+result = lsp(product, target)
+print(result)
+target1 = "apples"
+result1 = lsp(product, target1)
+print(result1)
